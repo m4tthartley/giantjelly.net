@@ -1,0 +1,21 @@
+{
+  "name": "giantjelly",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "start": "watchify src/index.js -o public/index.js -t [babelify] & http-server",
+    "build": "browserify src/index.js -o public/index.js -t [babelify]"
+  },
+  "dependencies": {
+    "babel-cli": "^6.26.0",
+    "babel-plugin-transform-object-rest-spread": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "babelify": "^8.0.0",
+    "http-server": "^0.11.1",
+    "jss": "^9.8.7",
+    "jss-preset-default": "^4.5.0",
+    "mulan": "^2.0.2",
+    "watchify": "^3.11.0"
+  }
+}
