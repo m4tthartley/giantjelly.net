@@ -51,10 +51,24 @@ const styles = jss({
 		fontSize: '1.2em'
 	},
 	link: {
-		color: '#8e2323',
 		textDecoration: 'none',
+	},
+	tw: {
+		color: '#2AA3EF',
 		'&:hover': {
-			color: '#c23a3a'
+			color: '#5Ac3fF'
+		}
+	},
+	yt: {
+		color: '#c23a3a',
+		'&:hover': {
+			color: '#e25a5a'
+		}
+	},
+	in: {
+		color: '#DB2E7C',
+		'&:hover': {
+			color: '#eB4E9C'
 		}
 	},
 	playIcon: {
@@ -63,6 +77,34 @@ const styles = jss({
 		left: '50%',
 		marginTop: '-35px',
 		marginLeft: '-50px'
+	},
+	socialLinks: {
+		width: '100%',
+		display: 'flex',
+		justifyContent: 'space-around'
+	},
+	subHeading: {
+		fontSize: '3em',
+		textAlign: 'center',
+		width: '100%',
+		fontWeight: 200,
+		color: '#888'
+	},
+	member: {
+	},
+	memberLink: {
+		textDecoration: 'none',
+		color: '#bbb',
+		width: '100%',
+
+		'&:hover': {
+			color: '#eee'
+		}
+	},
+	avatar: {
+		width: '100px',
+		height: '100px',
+		borderRadius: '100px'
 	}
 })
 
@@ -99,7 +141,44 @@ const App = (root) => {
 		<div class="${styles.container}">
 			<img class="${styles.logo}" src="jelly-white.png" />
 			<h1 class="${styles.title}">Giant Jelly Studios</h1>
-			<p><a class="${styles.link}" href="https://www.youtube.com/user/GiantJellyStudios">YOUTUBE</a></p>
+			<div class="${styles.socialLinks}">
+				<p><a class="${styles.link} ${styles.tw}" href="https://twitter.com/GiantJellyS">TWITTER</a></p>
+				<p><a class="${styles.link} ${styles.yt}" href="https://www.youtube.com/user/GiantJellyStudios">YOUTUBE</a></p>
+				<p><a class="${styles.link} ${styles.in}" href="https://www.instagram.com/giantjellystudios/">INSTAGRAM</a></p>
+			</div>
+	
+			<h2 class="${styles.subHeading}">Team</h2>
+			<div>
+
+
+				<img class="${styles.avatar}" src="matt.jpeg">
+				<h3 class="${styles.member}">Matt Hartley</h3>
+				
+				<p>Driving, Filming, Developing</p>
+
+				<p>- - - -</p>
+
+				<p><a class="${styles.memberLink}" href="https://www.instagram.com/m4tt53/">https://www.instagram.com/m4tt53/</a></p>
+				<p><a class="${styles.memberLink}" href="https://twitter.com/m4tt53">https://twitter.com/m4tt53</a></p>
+				<p><a class="${styles.memberLink}" href="https://github.com/m4tthartley">https://github.com/m4tthartley</a></p>
+				
+				
+				<br />
+				<br />
+
+				<img class="${styles.avatar}" src="nathan.jpeg">
+				<h3 class="${styles.member}">Nathan Walker</h3>
+
+				<p>Editing, Directing, Design</p>
+
+				<p>- - - -</p>
+
+				<p><a class="${styles.memberLink}" href="https://www.instagram.com/giantjellystudios/">https://www.instagram.com/giantjellystudios/</a></p>
+				<p><a class="${styles.memberLink}" href="https://twitter.com/Nath_117">https://twitter.com/Nath_117</a></p>
+				<p><a class="${styles.memberLink}" href="https://github.com/Giant-Jelly">https://github.com/Giant-Jelly</a></p>
+			</div>
+
+			<h2 class="${styles.subHeading}">Videos</h2>
 
 			${videos.map((v,i) => `
 				<div class="${styles.video}">
