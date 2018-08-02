@@ -52,10 +52,24 @@ const styles = jss({
 		fontSize: '1.2em'
 	},
 	link: {
-		color: '#8e2323',
 		textDecoration: 'none',
+	},
+	tw: {
+		color: '#2AA3EF',
 		'&:hover': {
-			color: '#c23a3a'
+			color: '#5Ac3fF'
+		}
+	},
+	yt: {
+		color: '#c23a3a',
+		'&:hover': {
+			color: '#e25a5a'
+		}
+	},
+	in: {
+		color: '#DB2E7C',
+		'&:hover': {
+			color: '#eB4E9C'
 		}
 	},
 	playIcon: {
@@ -64,7 +78,44 @@ const styles = jss({
 		left: '50%',
 		marginTop: '-35px',
 		marginLeft: '-50px'
-	}
+	},
+	teamContainer: {
+		display: 'flex',
+		justifyContent: 'space-evenly'
+	},
+	socialLinks: {
+		width: '100%',
+		display: 'flex',
+		justifyContent: 'space-around',
+
+		'& p': {
+			flex: 1
+		}
+	},
+	subHeading: {
+		fontSize: '3em',
+		textAlign: 'center',
+		width: '100%',
+		fontWeight: 200,
+		color: '#888'
+	},
+	member: {
+		'flex': 1
+	},
+	memberLink: {
+		textDecoration: 'none',
+		color: '#bbb',
+		width: '100%',
+
+		'&:hover': {
+			color: '#eee'
+		}
+	},
+	avatar: {
+		width: '100px',
+		height: '100px',
+		borderRadius: '100px'
+	},
 })
 
 const videos = [
@@ -102,7 +153,56 @@ const App = () => (render, root) => {
 		<div class="${styles.container}">
 			<img class="${styles.logo}" src="jelly-white.png" />
 			<h1 class="${styles.title}">Giant Jelly Studios</h1>
-			<p><a class="${styles.link}" href="https://www.youtube.com/user/GiantJellyStudios">YOUTUBE</a></p>
+			<div class="${styles.socialLinks}">
+				<p><a class="${styles.link} ${styles.tw}" href="https://twitter.com/GiantJellyS">TWITTER</a></p>
+				<p><a class="${styles.link} ${styles.yt}" href="https://www.youtube.com/user/GiantJellyStudios">YOUTUBE</a></p>
+				<p><a class="${styles.link} ${styles.in}" href="https://www.instagram.com/giantjellystudios/">INSTAGRAM</a></p>
+			</div>
+	
+			<h2 class="${styles.subHeading}">Team</h2>
+			<div class=${styles.teamContainer}>
+				<div class=${styles.member}>
+					<img class="${styles.avatar}" src="matt.jpeg">
+					<h3>Matt</h3>
+					
+					<p>Driving, Filming, Developing</p>
+
+					<p>- - - -</p>
+
+					<p><a class="${styles.memberLink}" href="https://www.instagram.com/m4tt53/">Intagram</a></p>
+					<p><a class="${styles.memberLink}" href="https://twitter.com/m4tt53">Twitter</a></p>
+					<p><a class="${styles.memberLink}" href="https://github.com/m4tthartley">Github</a></p>
+				
+				</div>
+
+				<div class=${styles.member}>
+					<img class="${styles.avatar}" src="nathan.jpeg">
+					<h3>Nathan</h3>
+
+					<p>Editing, Directing, Design</p>
+
+					<p>- - - -</p>
+
+					<p><a class="${styles.memberLink}" href="https://www.instagram.com/giantjellystudios/">Instagram</a></p>
+					<p><a class="${styles.memberLink}" href="https://twitter.com/Nath_117">Twitter</a></p>
+					<p><a class="${styles.memberLink}" href="https://github.com/Giant-Jelly">Github</a></p>
+				</div>
+
+				<div class=${styles.member}>
+					<img class="${styles.avatar}" src="diana.jpeg">
+					<h3 class="${styles.member}">Diana</h3>
+
+					<p>Social Networking</p>
+
+					<p>- - - -</p>
+
+					<p><a class="${styles.memberLink}" href="https://www.instagram.com/diana_5100">Instagram</a></p>
+					<p><a class="${styles.memberLink}" href="https://twitter.com/diana51_00">Twitter</a></p>
+				</div>
+
+			</div>
+
+			<h2 class="${styles.subHeading}">Videos</h2>
 
 			${videos.map((v,i) => `
 				<div class="${styles.video}">
