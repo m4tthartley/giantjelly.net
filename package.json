@@ -12,10 +12,11 @@
     "babel-plugin-transform-object-rest-spread": "^6.26.0",
     "babel-preset-env": "^1.7.0",
     "babelify": "^8.0.0",
+    "delegate-events": "^1.1.1",
     "http-server": "^0.11.1",
     "jss": "^9.8.7",
     "jss-preset-default": "^4.5.0",
-    "mulan": "^2.0.2",
+    "mulan": "^3.0.3",
     "watchify": "^3.11.0"
   }
 }

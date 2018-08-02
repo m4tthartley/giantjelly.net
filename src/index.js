@@ -1,4 +1,5 @@
-import {renderNode} from 'mulan'
+import {createRenderer} from 'mulan'
+import delegate from 'delegate-events'
 import jss from './jss-setup'
 
 const styles = jss({
@@ -94,8 +95,10 @@ window.playVideo = (id, youtubeId) => {
 	el.querySelector(`.${styles.playIcon}`).style.opacity = '0'
 }
 
-const App = (root) => {
-	return `
+const App = () => (render, root) => {
+	// delegate.bind(root, '')
+
+	render(`
 		<div class="${styles.container}">
 			<img class="${styles.logo}" src="jelly-white.png" />
 			<h1 class="${styles.title}">Giant Jelly Studios</h1>
@@ -113,7 +116,7 @@ const App = (root) => {
 
 			<div class="g-ytsubscribe" data-channel="GiantjellyStudios" data-layout="default" data-theme="light" data-count="default"></div>
 		</div>
-	`
+	`)
 }
 
-renderNode(document.getElementById('app'), App)
+createRenderer(document.getElementById('app'), App())

@@ -839,6 +839,12 @@ cipher-base@^1.0.0, cipher-base@^1.0.1, cipher-base@^1.0.3:
     inherits "^2.0.1"
     safe-buffer "^5.0.1"
 
+closest@*:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/closest/-/closest-0.0.1.tgz#26da6f80b3e0e17e71f80f12782819e9f653495c"
+  dependencies:
+    matches-selector "0.0.1"
+
 code-point-at@^1.0.0:
   version "1.1.0"
   resolved "https://registry.yarnpkg.com/code-point-at/-/code-point-at-1.1.0.tgz#0d070b4d043a5bea33a2f1a40e2edb3d9a4ccf77"
@@ -859,6 +865,10 @@ combine-source-map@^0.8.0, combine-source-map@~0.8.0:
 commander@^2.11.0:
   version "2.16.0"
   resolved "https://registry.yarnpkg.com/commander/-/commander-2.16.0.tgz#f16390593996ceb4f3eeb020b31d78528f7f8a50"
+
+component-event@*:
+  version "0.2.0"
+  resolved "https://registry.yarnpkg.com/component-event/-/component-event-0.2.0.tgz#8689a7c25a7dd0afe7e2e8408091d5b9e12ce196"
 
 concat-map@0.0.1:
   version "0.0.1"
@@ -980,6 +990,13 @@ deep-extend@^0.6.0:
 defined@^1.0.0:
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/defined/-/defined-1.0.0.tgz#c98d9bcef75674188e110969151199e39b1fa693"
+
+delegate-events@^1.1.1:
+  version "1.1.1"
+  resolved "https://registry.yarnpkg.com/delegate-events/-/delegate-events-1.1.1.tgz#dab490a9c1f1d40ca40ebcd21edaf717b671d4d4"
+  dependencies:
+    closest "*"
+    component-event "*"
 
 delegates@^1.0.0:
   version "1.0.0"
@@ -1578,6 +1595,10 @@ loose-envify@^1.0.0:
   dependencies:
     js-tokens "^3.0.0 || ^4.0.0"
 
+matches-selector@0.0.1:
+  version "0.0.1"
+  resolved "https://registry.yarnpkg.com/matches-selector/-/matches-selector-0.0.1.tgz#1df5262243ae341c1a0804dd302048267ac713bb"
+
 math-random@^1.0.1:
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/math-random/-/math-random-1.0.1.tgz#8b3aac588b8a66e4975e3cdea67f7bb329601fac"
@@ -1687,9 +1708,9 @@ ms@2.0.0:
   version "2.0.0"
   resolved "https://registry.yarnpkg.com/ms/-/ms-2.0.0.tgz#5608aeadfc00be6c2901df5f9861788de0d597c8"
 
-mulan@^2.0.2:
-  version "2.0.2"
-  resolved "https://registry.yarnpkg.com/mulan/-/mulan-2.0.2.tgz#3361a7fd1f62668d6006638834b06105b43da91a"
+mulan@^3.0.3:
+  version "3.0.3"
+  resolved "https://registry.yarnpkg.com/mulan/-/mulan-3.0.3.tgz#fd452f136b02630a0eef190896c46b73e9a86bce"
 
 nan@^2.9.2:
   version "2.10.0"
