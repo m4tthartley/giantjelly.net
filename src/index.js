@@ -78,10 +78,18 @@ const styles = jss({
 		marginTop: '-35px',
 		marginLeft: '-50px'
 	},
+	teamContainer: {
+		display: 'flex',
+		justifyContent: 'space-evenly'
+	},
 	socialLinks: {
 		width: '100%',
 		display: 'flex',
-		justifyContent: 'space-around'
+		justifyContent: 'space-around',
+
+		'& p': {
+			flex: 1
+		}
 	},
 	subHeading: {
 		fontSize: '3em',
@@ -91,6 +99,7 @@ const styles = jss({
 		color: '#888'
 	},
 	member: {
+		'flex': 1
 	},
 	memberLink: {
 		textDecoration: 'none',
@@ -105,7 +114,7 @@ const styles = jss({
 		width: '100px',
 		height: '100px',
 		borderRadius: '100px'
-	}
+	},
 })
 
 const videos = [
@@ -148,34 +157,46 @@ const App = (root) => {
 			</div>
 	
 			<h2 class="${styles.subHeading}">Team</h2>
-			<div>
+			<div class=${styles.teamContainer}>
+				<div class=${styles.member}>
+					<img class="${styles.avatar}" src="matt.jpeg">
+					<h3>Matt</h3>
+					
+					<p>Driving, Filming, Developing</p>
 
+					<p>- - - -</p>
 
-				<img class="${styles.avatar}" src="matt.jpeg">
-				<h3 class="${styles.member}">Matt Hartley</h3>
+					<p><a class="${styles.memberLink}" href="https://www.instagram.com/m4tt53/">Intagram</a></p>
+					<p><a class="${styles.memberLink}" href="https://twitter.com/m4tt53">Twitter</a></p>
+					<p><a class="${styles.memberLink}" href="https://github.com/m4tthartley">Github</a></p>
 				
-				<p>Driving, Filming, Developing</p>
+				</div>
 
-				<p>- - - -</p>
+				<div class=${styles.member}>
+					<img class="${styles.avatar}" src="nathan.jpeg">
+					<h3>Nathan</h3>
 
-				<p><a class="${styles.memberLink}" href="https://www.instagram.com/m4tt53/">https://www.instagram.com/m4tt53/</a></p>
-				<p><a class="${styles.memberLink}" href="https://twitter.com/m4tt53">https://twitter.com/m4tt53</a></p>
-				<p><a class="${styles.memberLink}" href="https://github.com/m4tthartley">https://github.com/m4tthartley</a></p>
-				
-				
-				<br />
-				<br />
+					<p>Editing, Directing, Design</p>
 
-				<img class="${styles.avatar}" src="nathan.jpeg">
-				<h3 class="${styles.member}">Nathan Walker</h3>
+					<p>- - - -</p>
 
-				<p>Editing, Directing, Design</p>
+					<p><a class="${styles.memberLink}" href="https://www.instagram.com/giantjellystudios/">Instagram</a></p>
+					<p><a class="${styles.memberLink}" href="https://twitter.com/Nath_117">Twitter</a></p>
+					<p><a class="${styles.memberLink}" href="https://github.com/Giant-Jelly">Github</a></p>
+				</div>
 
-				<p>- - - -</p>
+				<div class=${styles.member}>
+					<img class="${styles.avatar}" src="diana.jpeg">
+					<h3 class="${styles.member}">Diana</h3>
 
-				<p><a class="${styles.memberLink}" href="https://www.instagram.com/giantjellystudios/">https://www.instagram.com/giantjellystudios/</a></p>
-				<p><a class="${styles.memberLink}" href="https://twitter.com/Nath_117">https://twitter.com/Nath_117</a></p>
-				<p><a class="${styles.memberLink}" href="https://github.com/Giant-Jelly">https://github.com/Giant-Jelly</a></p>
+					<p>Social Networking</p>
+
+					<p>- - - -</p>
+
+					<p><a class="${styles.memberLink}" href="https://www.instagram.com/diana_5100">Instagram</a></p>
+					<p><a class="${styles.memberLink}" href="https://twitter.com/diana51_00">Twitter</a></p>
+				</div>
+
 			</div>
 
 			<h2 class="${styles.subHeading}">Videos</h2>
